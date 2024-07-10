@@ -8,6 +8,7 @@ AUTHORIZED_TOPICS = [
     "ENTERTAINMENT",
     "SPORTS",
     "SCIENCE",
+    "HEALTH",
 ]
 
 class GoogleNewsScraper:
@@ -34,8 +35,8 @@ class GoogleNewsScraper:
     def top_news_from_topic(self, topic: str) -> list[str]:
         # topic in WORLD NATION BUSINESS TECHNOLOGY ENTERTAINMENT SPORTS SCIENCE 
         assert topic in AUTHORIZED_TOPICS
-        url = self.topic_url_template.format(topic = topic) + self.lang_suffix
-        retrieved_urls = self.retrieve_urls(url)
+        topic_url = self.topic_url_template.format(topic = topic) + self.lang_suffix
+        retrieved_urls = self.retrieve_urls(topic_url)
         return retrieved_urls
     
     def retrieve_urls(self, url: str) -> list[str]:
