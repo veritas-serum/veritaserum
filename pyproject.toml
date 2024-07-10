@@ -10,4 +10,4 @@ name = "veritaserum"
 version = "0.0.1"
 
 [options]
-python_requires = ">=3.6"
+python_requires = ">=3.12.4"
