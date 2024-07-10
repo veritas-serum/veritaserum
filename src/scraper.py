@@ -42,8 +42,5 @@ class GoogleNewsScraper:
     
     def retrieve_urls(self, url: str) -> list[str]:
         response = feedparser.parse(url)
-        output_urls = []
-        for entry in response['entries']:
-            output_urls.append(entry['link'])
-        return output_urls
+        return [entry['link'] for entry in response['entries']]
 
