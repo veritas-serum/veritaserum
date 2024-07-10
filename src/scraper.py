@@ -1,5 +1,6 @@
 import feedparser
 
+# Source of authorized topics: https://stackoverflow.com/questions/51537063/url-format-for-google-news-rss-feed
 AUTHORIZED_TOPICS = [
     "WORLD",
     "NATION",
