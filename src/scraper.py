@@ -26,13 +26,6 @@ class GoogleNewsScraper:
         return retrieved_urls
         
 
-    def query(self, query: str) -> list[str]:
-        query_suffix = self.query_suffix_template.format(query=query)
-        url = self.base_url + query_suffix + "&" + self.lang_suffix
-        retrieved_urls = retrieve_urls(url)
-        return retrieved_urls
-
-
     def top_news_from_topic(self, topic: str) -> list[str]:
         # topic in WORLD NATION BUSINESS TECHNOLOGY ENTERTAINMENT SPORTS SCIENCE 
         assert topic in AUTHORIZED_TOPICS
