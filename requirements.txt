@@ -1,2 +1,7 @@
 pandas==2.2.2
 label-studio==1.12.1
+article-parser==1.8.0
+pytest==8.2.2
+dataclasses_json==0.6.7
+ipdb==0.13.13
+feedparser==6.0.11
