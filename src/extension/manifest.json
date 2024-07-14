@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Minimal Manifest",
+    "version": "0.0.1",
+    "description": "A basic example extension with only required keys",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://news.google.com/*hl=fr&gl=FR*"],
+          "js": ["content-script.js"]
+        }
+      ]
+}
